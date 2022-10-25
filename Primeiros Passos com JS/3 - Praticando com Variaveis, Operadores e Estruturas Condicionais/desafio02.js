@@ -13,16 +13,12 @@ IMC em adultos condição:
 5 - Acima de 40 Obsidade Grave;
 */
 
-const peso = 70;
+const peso = 90;
 const altura = 1.75;
 
-
 class calculoIMC {
-    peso;
-    altura;
-    
     imc(peso, altura){
-        this.resultado((peso / (altura * altura)).toFixed(2));
+        this.resultado((peso / Math.pow(altura, 2))).toFixed(2);
     }
     resultado(imc){
         if (imc < 18.5){
